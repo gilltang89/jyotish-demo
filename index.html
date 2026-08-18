@@ -311,7 +311,7 @@ function generateChart() {
   currentSampleKey = sample.key;
   btn.textContent = '✦ 正在调取样本星盘数据... ✦';
   setTimeout(function () {
-    renderChartResults(sample.kundli);
+    renderChartResults({ success: true, data: sample.kundli });
     res.classList.add('visible');
     animateBars();
     btn.textContent = '✦ 重新生成我的印度星盘 ✦';
